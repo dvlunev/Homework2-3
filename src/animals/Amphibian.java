@@ -4,12 +4,11 @@ import java.util.Objects;
 
 public class Amphibian extends Animal {
 
-    private final String livingEnvironment;
+    private final String livingEnvironment = "вблизи водоемов";
 
     public Amphibian(String name,
                      int age) {
         super(name, age);
-        this.livingEnvironment = "вблизи водоемов";
     }
 
     @Override

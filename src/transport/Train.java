@@ -53,9 +53,7 @@ public class Train extends Transport {
     }
 
     public void setDepartureStation(String departureStation) {
-        if (departureStation == null ||
-                departureStation.isEmpty() ||
-                departureStation.isBlank()) {
+        if (StringUtils.isNullOrEmptyOrBlank(departureStation)) {
             departureStation = "Парк начальная";
         }
         this.departureStation = departureStation;
@@ -66,9 +64,7 @@ public class Train extends Transport {
     }
 
     public void setArrivalStation(String arrivalStation) {
-        if (arrivalStation == null ||
-                arrivalStation.isEmpty() ||
-                arrivalStation.isBlank()) {
+        if (StringUtils.isNullOrEmptyOrBlank(arrivalStation)) {
             arrivalStation = "Парк конечная";
         }
         this.arrivalStation = arrivalStation;

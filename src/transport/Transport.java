@@ -20,11 +20,11 @@ public abstract class Transport {
                      String fuelType,
                      double fuelPercentage
     ) {
-        if (brand == null || brand.isEmpty() || brand.isBlank()) {
+        if (StringUtils.isNullOrEmptyOrBlank(brand)) {
             brand = "default";
         }
         this.brand = brand;
-        if (model == null || model.isEmpty() || model.isBlank()) {
+        if (StringUtils.isNullOrEmptyOrBlank(model)) {
             model = "default";
         }
         this.model = model;
@@ -32,13 +32,13 @@ public abstract class Transport {
             year = 2000;
         }
         this.year = year;
-        if (country == null || country.isEmpty() || country.isBlank()) {
+        if (StringUtils.isNullOrEmptyOrBlank(country)) {
             country = "default";
         }
         this.country = country;
         setColor(color);
         setMaxSpeed(maxSpeed);
-        if (fuelType == null || fuelType.isBlank() || fuelType.isEmpty()) {
+        if (StringUtils.isNullOrEmptyOrBlank(fuelType)) {
             fuelType = "дизель";
         }
         this.fuelType = fuelType;
@@ -66,7 +66,7 @@ public abstract class Transport {
     }
 
     public void setColor(String color) {
-        if (color == null || color.isBlank() || color.isEmpty()) {
+        if (StringUtils.isNullOrEmptyOrBlank(color)) {
             color = "белый";
         }
         this.color = color;
